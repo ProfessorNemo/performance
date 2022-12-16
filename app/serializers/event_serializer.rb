@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EventSerializer < ActiveModel::Serializer
   # аттрибуты, которые надо возвращать
   attributes :id, :title, :start_date, :end_date

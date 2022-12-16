@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class Event < ApplicationRecord
   # где спектакль еще не кончился на текущий момент в порядке от начала...
-  scope :actual, -> { where('upper(schedule) >= ?', Date.today).order('lower(schedule)') }
+  scope :actual, -> { where('upper(schedule) >= ?', Time.zone.today).order('lower(schedule)') }
 
   attribute :starts_at, :date
   attribute :ends_at, :date
@@ -18,26 +20,26 @@ class Event < ApplicationRecord
   def check_dates_order
     return unless starts_at.present? && ends_at.present?
 
-    errors.add(:ends_at, 'must be after starts_at') if ends_at < starts_at
+    errors.add(:ends_at, 'should be equal or after starts_at') if ends_at < starts_at
   end
 
   # проверка на уровне рельс (не БД), есть ли в БД спектакли с пересечением дат
   def check_schedule_overlapping
-    return unless schedule.present?
+    return if schedule.blank?
 
     # Если спектакль уже записан в базу, то его не нужно учитывать
     scope = persisted? ? Event.where.not(id: id) : Event.all
-    return unless scope.where('? >= lower(schedule) AND upper(schedule) >= ?', schedule.end, schedule.begin).exists?
+    return unless scope.exists?(['? >= lower(schedule) AND upper(schedule) >= ?', schedule.end, schedule.begin])
 
     # ошибка, если есть пересечения
-    errors.add(:starts_at, :taken)
-    errors.add(:ends_at, :taken)
+    errors.add(:starts_at, :overlap)
+    errors.add(:ends_at, :overlap)
   end
 
   def set_schedule
     return unless starts_at.present? && ends_at.present?
 
-    self.schedule = starts_at..ends_at
+    self.schedule = starts_at...ends_at
   end
 end
 

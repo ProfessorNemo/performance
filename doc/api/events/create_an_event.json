@@ -1,0 +1,69 @@
+{
+  "resource": "Events",
+  "resource_explanation": "Events resource",
+  "http_method": "POST",
+  "route": "/events",
+  "description": "Create an event",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "event",
+      "with_example": true,
+      "required": true,
+      "name": "title",
+      "description": "Event title"
+    },
+    {
+      "scope": "event",
+      "with_example": true,
+      "required": true,
+      "name": "starts_at",
+      "description": "Event starts at, DD-MM-YYYY"
+    },
+    {
+      "scope": "event",
+      "with_example": true,
+      "required": true,
+      "name": "ends_at",
+      "description": "Event ends_at, DD-MM-YYYY"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/events",
+      "request_body": "{\"event\":{\"title\":\"Бал вампиров\",\"starts_at\":\"2023-12-01\",\"ends_at\":\"2023-12-15\"}}",
+      "request_headers": {
+        "Version": "HTTP/1.0",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": null,\n  \"title\": \"Бал вампиров\",\n  \"start_date\": \"01-12-2023\",\n  \"end_date\": \"15-12-2023\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"6528dbf089ed487489db5ee196ace59a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a704f39d-0844-4b58-8646-92a6b54d2b3e",
+        "X-Runtime": "0.002579",
+        "Content-Length": "95"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

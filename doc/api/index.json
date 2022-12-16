@@ -1,0 +1,52 @@
+{
+  "resources": [
+    {
+      "name": "Events",
+      "explanation": "Events resource",
+      "examples": [
+        {
+          "description": "Create - Invalid params",
+          "link": "events/create_-_invalid_params.json",
+          "groups": "all",
+          "route": "/events",
+          "method": "post"
+        },
+        {
+          "description": "Create - Invalid request",
+          "link": "events/create_-_invalid_request.json",
+          "groups": "all",
+          "route": "/events",
+          "method": "post"
+        },
+        {
+          "description": "Create an event",
+          "link": "events/create_an_event.json",
+          "groups": "all",
+          "route": "/events",
+          "method": "post"
+        },
+        {
+          "description": "Delete - Invalid `id` request",
+          "link": "events/delete_-_invalid_`id`_request.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Deleting an event",
+          "link": "events/deleting_an_event.json",
+          "groups": "all",
+          "route": "/events/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Getting a list of events",
+          "link": "events/getting_a_list_of_events.json",
+          "groups": "all",
+          "route": "/events",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

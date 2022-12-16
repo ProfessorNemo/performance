@@ -1,0 +1,49 @@
+{
+  "resource": "Events",
+  "resource_explanation": "Events resource",
+  "http_method": "GET",
+  "route": "/events",
+  "description": "Getting a list of events",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/events",
+      "request_body": null,
+      "request_headers": {
+        "Version": "HTTP/1.0",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 539,\n    \"title\": \"Event #1\",\n    \"start_date\": \"18-12-2022\",\n    \"end_date\": \"19-12-2022\"\n  },\n  {\n    \"id\": 540,\n    \"title\": \"Event #2\",\n    \"start_date\": \"20-12-2022\",\n    \"end_date\": \"21-12-2022\"\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"094610647b2ae9e70f0abe70d2d450bd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "70227629-5e97-404c-bc4a-00d4063d8b62",
+        "X-Runtime": "0.011778",
+        "Content-Length": "161"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

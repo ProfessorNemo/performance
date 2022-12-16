@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class EventsController < ApplicationController
   def index
-    events = Event.all
+    events = Event.actual
 
     render json: events
   end
@@ -8,11 +10,7 @@ class EventsController < ApplicationController
   def create
     event = Event.new(event_params)
 
-    if event.save
-      render json: event
-    else
-      render json: { errors: event.errors.full_messages }, status: 422
-    end
+    respond_with(event)
   end
 
   def destroy

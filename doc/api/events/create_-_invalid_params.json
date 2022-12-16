@@ -1,0 +1,68 @@
+{
+  "resource": "Events",
+  "resource_explanation": "Events resource",
+  "http_method": "POST",
+  "route": "/events",
+  "description": "Create - Invalid params",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "event",
+      "with_example": true,
+      "required": true,
+      "name": "title",
+      "description": "Event title"
+    },
+    {
+      "scope": "event",
+      "with_example": true,
+      "required": true,
+      "name": "starts_at",
+      "description": "Event starts at, DD-MM-YYYY"
+    },
+    {
+      "scope": "event",
+      "with_example": true,
+      "required": true,
+      "name": "ends_at",
+      "description": "Event ends_at, DD-MM-YYYY"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/events",
+      "request_body": "{\"event\":{\"title\":\"\"}}",
+      "request_headers": {
+        "Version": "HTTP/1.0",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": [\n    \"Title can't be blank\",\n    \"Starts at can't be blank\",\n    \"Ends at can't be blank\"\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "d87df651-b14a-4694-8dbb-a4a9d5f1dd97",
+        "X-Runtime": "0.005364",
+        "Content-Length": "87"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
