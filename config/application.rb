@@ -41,5 +41,8 @@ module Poster
 
     # в директории db появится файлик structure.sql (для удобства)
     config.active_record.schema_format = :sql
+
+    # временная зона сервера
+    config.time_zone = 'Moscow'
   end
 end

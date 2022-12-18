@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/events?token=<api_token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"73acf2941fb68d030706fc000d5ae3e5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 93ea4a18-525d-4602-b29e-60b19647db9d
+      X-Runtime:
+      - '0.048890'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjMsInRpdGxlIjoi0JHQsNC7INCy0LDQvNC/0LjRgNC+0LIiLCJzdGFydF9kYXRlIjoiMTQtMDItMjAyMyIsImVuZF9kYXRlIjoiMTQtMDMtMjAyMyJ9LHsiaWQiOjQsInRpdGxlIjoi0JTQtdC80L7QvSDQntC90LXQs9C40L3QsCIsInN0YXJ0X2RhdGUiOiIxNS0wMy0yMDIzIiwiZW5kX2RhdGUiOiIzMS0wMy0yMDIzIn0seyJpZCI6NSwidGl0bGUiOiLQn9GA0LXRgdGC0YPQv9C70LXQvdC40LUg0Lgg0L3QsNC60LDQt9Cw0L3QuNC1Iiwic3RhcnRfZGF0ZSI6IjAxLTA0LTIwMjMiLCJlbmRfZGF0ZSI6IjE3LTA0LTIwMjMifSx7ImlkIjo4LCJ0aXRsZSI6ItCR0LXRgdGLIiwic3RhcnRfZGF0ZSI6IjAxLTA2LTIwMjMiLCJlbmRfZGF0ZSI6IjAxLTA3LTIwMjMifSx7ImlkIjo3LCJ0aXRsZSI6ItCe0LzQtdC9Iiwic3RhcnRfZGF0ZSI6IjAxLTA4LTIwMjMiLCJlbmRfZGF0ZSI6IjMwLTA5LTIwMjMifSx7ImlkIjo2LCJ0aXRsZSI6ItCh0L7QvdC90LDRjyDQu9C+0YnQuNC90LAiLCJzdGFydF9kYXRlIjoiMDEtMTAtMjAyMyIsImVuZF9kYXRlIjoiMzAtMTEtMjAyMyJ9LHsiaWQiOjEsInRpdGxlIjoiTSBcdTAwMjYgTSIsInN0YXJ0X2RhdGUiOiIwNi0xMi0yMDIzIiwiZW5kX2RhdGUiOiIxMi0xMi0yMDIzIn0seyJpZCI6MiwidGl0bGUiOiJGaWdhcm8iLCJzdGFydF9kYXRlIjoiMTQtMTItMjAyMyIsImVuZF9kYXRlIjoiMTgtMTItMjAyMyJ9XQ==
+  recorded_at: Sun, 18 Dec 2022 01:30:34 GMT
+recorded_with: VCR 6.1.0

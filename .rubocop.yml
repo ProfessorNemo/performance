@@ -40,3 +40,6 @@ Style/StringConcatenation:
 
 convention:Metrics/BlockLength:
   Max: 70
+
+Rails/HttpPositionalArguments:
+  Enabled: false
