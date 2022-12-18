@@ -38,9 +38,9 @@ RSpec.describe Exchange::Client do
 
   describe '#create_performance' do
     # it 'creates performance with proper params' do
-    #   body = JSON.dump({ event_id: 1, title: 'Бесы', start_date: '01-06-2023', end_date: '01-07-2023' })
+    #   body = JSON.dump({ title: 'Бесы', start_date: '01-06-2023', end_date: '01-07-2023' })
     #
-    #   stub_request(:post, "http://127.0.0.1:3000/events/#{JSON.parse(body)['event_id']}")
+    #   stub_request(:post, 'http://127.0.0.1:3000/events')
     #     .with(
     #       body: body,
     #       headers: {
@@ -50,7 +50,7 @@ RSpec.describe Exchange::Client do
     #     )
     #     .to_return(status: 200, body: body, headers: { content_type: 'application/json' })
     #
-    #   performance = test_client.create_performance event_id: 1, title: 'Бесы', start_date: '01-06-2023',
+    #   performance = test_client.create_performance title: 'Бесы', start_date: '01-06-2023',
     #                                                end_date: '01-07-2023'
     #   expect(performance['title']).to eq('Бесы')
     # end

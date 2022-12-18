@@ -12,7 +12,7 @@ module Exchange
 
     # Создать новый спектакль с заданными параметрами
     def create_performance(params)
-      post "events/#{params[:event_id]}", self, params
+      post 'events', self, params
     end
   end
 end

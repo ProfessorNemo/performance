@@ -17,8 +17,9 @@ module Exchange
     def post(path, client, params = {})
       # params = { title: 'Бесы', start_date: '01-06-2023', end_date: '01-07-2023' }
       # path --> events
+
       respond_with(
-        connection(client).post(path, JSON.dump(params))
+        connection(client).post(path, params)
       )
     end
 

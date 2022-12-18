@@ -9,6 +9,7 @@ module Exchange
     def connection(client)
       Faraday.new(options(client)) do |faraday|
         faraday.adapter Faraday.default_adapter
+        faraday.request :url_encoded
       end
     end
 
@@ -16,17 +17,20 @@ module Exchange
 
     # набор опций: заголовки, токен для проверки подлинности
     def options(client)
+      headers = {
+        accept: 'text/html,application/xhtml+xml',
+        user_agent: 'Mozilla/5.0 (X11; Linux x86_64)',
+        host: BASE_URL,
+        connection: 'keep-alive'
+      }
+
+      headers['token'] = client.token unless client.token.nil?
+
       {
-        headers: {
-          accept: 'text/html,application/xhtml+xml',
-          user_agent: 'Mozilla/5.0 (X11; Linux x86_64)',
-          host: BASE_URL,
-          connection: 'keep-alive',
-          'token' => client.token
-        },
-        # куда шлем запрос
+        headers: headers,
         url: BASE_URL
       }
     end
   end
 end
+
