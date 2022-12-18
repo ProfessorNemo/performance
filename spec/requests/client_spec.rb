@@ -38,20 +38,20 @@ RSpec.describe Exchange::Client do
 
   describe '#create_performance' do
     # it 'creates performance with proper params' do
-    #   body = JSON.dump({ title: 'Бесы', start_date: '01-06-2023', end_date: '01-07-2023' })
+    #   body = JSON.dump({ title: 'Ромео и Джульетта', start_date: '01-06-2025', end_date: '01-07-2025' })
     #
     #   stub_request(:post, 'http://127.0.0.1:3000/events')
     #     .with(
     #       body: body,
     #       headers: {
-    #         content_type: 'application/json',
+    #         Accept: 'application/json',
     #         token: test_client.token
     #       }
     #     )
-    #     .to_return(status: 200, body: body, headers: { content_type: 'application/json' })
+    #     .to_return(status: 200, body: body, headers: {})
     #
-    #   performance = test_client.create_performance title: 'Бесы', start_date: '01-06-2023',
-    #                                                end_date: '01-07-2023'
+    #   performance = test_client.create_performance title: 'Ромео и Джульетта', start_date: '01-06-2025',
+    #                                                end_date: '01-07-2025'
     #   expect(performance['title']).to eq('Бесы')
     # end
 
