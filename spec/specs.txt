@@ -22,5 +22,6 @@ example_id                                            | status | run_time       
 ./spec/models/events_spec.rb[1:4:2:5:1]               | passed | 0.00363 seconds |
 ./spec/models/events_spec.rb[1:4:2:6:1]               | passed | 0.00365 seconds |
 ./spec/requests/api_json_spec.rb[1:1]                 | passed | 0.0346 seconds  |
-./spec/requests/client_spec.rb[1:1]                   | passed | 0.00423 seconds |
-./spec/requests/client_spec.rb[1:2:1]                 | passed | 0.00286 seconds |
+./spec/requests/client_spec.rb[1:1]                   | passed | 0.00428 seconds |
+./spec/requests/client_spec.rb[1:2:1]                 | passed | 0.00281 seconds |
+./spec/requests/client_spec.rb[1:2:2]                 | passed | 0.00264 seconds |

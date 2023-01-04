@@ -14,7 +14,7 @@ class ApplicationController < ActionController::API
   private
 
   def respond_with(object)
-    if object.valid?
+    if object.persisted?
       render json: object
     else
       render json: { errors: object.errors.full_messages }, status: :unprocessable_entity

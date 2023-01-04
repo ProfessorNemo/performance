@@ -7,7 +7,7 @@ module Exchange
     include Exchange::Request
 
     def performances(params = {})
-      get 'events', self, params
+      get 'events', self, {}
     end
 
     # Создать новый спектакль с заданными параметрами

@@ -37,23 +37,21 @@ RSpec.describe Exchange::Client do
   end
 
   describe '#create_performance' do
-    # it 'creates performance with proper params' do
-    #   body = JSON.dump({ title: 'Ромео и Джульетта', start_date: '01-06-2025', end_date: '01-07-2025' })
-    #
-    #   stub_request(:post, 'http://127.0.0.1:3000/events')
-    #     .with(
-    #       body: body,
-    #       headers: {
-    #         Accept: 'application/json',
-    #         token: test_client.token
-    #       }
-    #     )
-    #     .to_return(status: 200, body: body, headers: {})
-    #
-    #   performance = test_client.create_performance title: 'Ромео и Джульетта', start_date: '01-06-2025',
-    #                                                end_date: '01-07-2025'
-    #   expect(performance['title']).to eq('Бесы')
-    # end
+    it 'creates performance with proper params' do
+      body = JSON.dump({ title: 'Ромео и Джульетта', start_date: '2025-06-01', end_date: '2025-07-01' })
+
+      stub_request(:post, 'http://127.0.0.1:3000/events')
+        .with(
+          headers: {
+            token: test_client.token
+          }
+        )
+        .to_return(status: 200, body: body, headers: { content_type: 'application/json' })
+
+      performance = test_client.create_performance title: 'Ромео и Джульетта', start_date: '2025-06-01',
+                                                   end_date: '2025-07-01'
+      expect(performance['title']).to eq('Ромео и Джульетта')
+    end
 
     it 'raises an error with invalid params' do
       stub_request(:post, 'http://127.0.0.1:3000/events')
